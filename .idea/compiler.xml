@@ -9,5 +9,8 @@
         <module name="spring-mvc" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="crud-shatov" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
