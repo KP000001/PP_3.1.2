@@ -27,7 +27,7 @@ public class UserController {
     @GetMapping("/{id}")
     public String OneUser(@PathVariable int id, Model model) {
         model.addAttribute("user", userService.findOne(id));
-        return "/OneUser";
+        return "oneUser";
     }
 
     @GetMapping("/new")

@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/html" lang="en">
 <head>
   <meta charset="UTF-8">
   <title>User</title>
@@ -9,7 +9,6 @@
 <p th:text="${user.getName() + ' ' + user.getLastName() + ', ' + user.getAge()}">VALUE</p>
 <p th:text="${'Age: ' + user.getAge()}">VALUE</p>
 <p th:text="${'Id: ' + user.getId()}">VALUE</p>
-
 <form th:method="GET" th:action="@{/{id}/edit(id = ${user.getId()})}">
   <input type="submit" value="Edit">
 </form>

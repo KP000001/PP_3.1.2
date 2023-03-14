@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/html" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Users</title>
@@ -10,10 +11,8 @@
        th:text="${user.getName() + ' ' + user.getLastName()}">user</a>
 </div>
 <br/>
-
 <form th:method="GET" th:action="@{/new}">
     <input type="submit" value="Create new User">
 </form>
-
 </body>
 </html>
