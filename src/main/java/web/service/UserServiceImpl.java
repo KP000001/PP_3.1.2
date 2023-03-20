@@ -9,7 +9,6 @@ import web.model.User;
 import java.util.List;
 
 @Service
-@Transactional(readOnly = true)
 public class UserServiceImpl implements UserService {
     private final UserDAO userDAO;
 
@@ -19,11 +18,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public List<User> findAll() {
         return userDAO.findAll();
     }
 
     @Override
+    @Transactional
     public User findOne(int id) {
         return userDAO.findById(id);
     }
